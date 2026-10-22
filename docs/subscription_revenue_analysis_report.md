@@ -94,17 +94,28 @@ The business could investigate whether annual billing improves customer retentio
 
 ## 7. Revenue by Upgrade and Downgrade Status
 
-The analysis grouped subscription records using both `upgrade_flag` and `downgrade_flag`. It calculated total MRR, total ARR, and subscription counts for each combination of flags.
+The analysis grouped subscription records using `upgrade_flag` and `downgrade_flag`. Total MRR, total ARR, and subscription counts were calculated for each combination.
 
-This comparison helps examine whether revenue distribution differs between records associated with upgrades, downgrades, or neither flag.
+| Upgrade Flag | Downgrade Flag | Subscription Records |  Total MRR |    Total ARR |
+| ------------ | -------------- | -------------------: | ---------: | -----------: |
+| False        | False          |                4,276 | $9,656,818 | $115,881,816 |
+| True         | False          |                  195 |   $418,932 |   $5,027,184 |
+| False        | True           |                  506 | $1,222,563 |  $14,670,756 |
+| True         | True           |                   23 |    $40,434 |     $485,208 |
 
-The numerical results for this comparison should be inserted after reviewing the output table from the notebook.
+### Key Findings
+
+* Most subscription records (4,276) have neither the upgrade nor downgrade flag set.
+* Records with only the downgrade flag set account for $1,222,563 in total MRR.
+* Records with only the upgrade flag set account for $418,932 in total MRR.
+* Only 23 subscription records have both flags set.
 
 ### Business Implications
 
-If the results show differences in average or total MRR across these groups, the business can investigate whether subscription changes are associated with higher or lower recurring revenue.
+The downgrade-only group has a higher aggregated MRR than the upgrade-only group. This is a comparison of group totals, not evidence that downgrades increase revenue or that upgrades reduce it.
 
-However, the flags alone do not establish when a change occurred or how much revenue changed because of it. A before-and-after analysis using subscription history would provide stronger evidence of the revenue impact of upgrades and downgrades.
+The business should investigate revenue changes at the subscription level and examine the timing of upgrades and downgrades to understand their actual financial impact.
+
 
 ## 8. Revenue by Churn Status
 
