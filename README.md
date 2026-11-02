@@ -111,7 +111,6 @@ SaaS Product Intelligence Platform/
 │   │   ├── 01_support_by_industry.sql
 │   │   ├── 02_feature_usage_by_segment.sql
 │   │   ├── 03_churn_reasons_by_segment.sql
-│   │   └── 04_powerbi_views.sql
 │   │
 │   └── quality_checks/
 │       └── 02_subscription_usage_relationship.sql
